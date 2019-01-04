@@ -1,0 +1,6 @@
+to compile this cp8 code, you will have to use dynamic linking with shared library
+
+howto
+
+1. gcc -shared -fpic -o libcp8.so lib/dg_echo.c lib/dg_cli.c -lunp
+2. gcc -o bin/udpsrv1 udpsrv1.c ./libcp8.so -lunp
